@@ -7,35 +7,8 @@ import { getContacts } from "./services/contactsService";
 import ContactsContextProvider from "./Context/ContactsContext";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-  function increment() {
-    /*  setCounter(counter + 1);
-    setCounter(counter + 1);
-    setCounter(counter + 1); */
-    // si quiero hacer esto uso una callback
-    setCounter((currentCounter) => {
-      return currentCounter + 1;
-    });
-    /* 
-    setCounter((currentCounter) => {
-      return currentCounter + 1;
-    });
-    setCounter((currentCounter) => {
-      return currentCounter + 1;
-    }); */
-    // por eso usamos la callback para grabar el mensaje
-  }
-
-  function decrement() {
-    setCounter(counter - 1);
-  }
-
   return (
     <div>
-      <img src="/vite.svg" />
-      <button onClick={increment}>+</button>
-      <span>Contador: {counter}</span>
-      <button onClick={decrement}>-</button>
       <ContactsContextProvider>
         <Routes>
           <Route path="/" element={<HomeScreen />} />

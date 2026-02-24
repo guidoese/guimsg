@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { getContacts } from "../../services/contactsService";
 import { ContactsContext } from "../../Context/ContactsContext";
 import { Link } from "react-router";
+import "./ContactSidebar.css";
 
 export default function ContactSidebar() {
   //useContext es un hook que nos permite consumir el contexto
@@ -9,24 +10,23 @@ export default function ContactSidebar() {
   //Una vez consumido me traera el valor del value del contexto
   const { contacts, favorite_name } = useContext(ContactsContext);
   return (
-    <div>
-      <h2>Whatsapp Clone</h2>
-      <h3>Me cae muy bien: {favorite_name}</h3>
-      <div>
+    <div className="sidebar-container">
+      <div className="sidebar-header">
+        <h2>Chats</h2>
+      </div>
+      <div className="contacts-list">
         {contacts.map((contact) => {
           return (
-            <Link to={`/contact/${contact.id}`} key={contact.id}>
+            <Link to={`/contact/${contact.id}`} key={contact.id} className="contact-item">
               <img
                 src={contact.profile_picture}
                 alt={contact.name}
-                style={{
-                  width: "200px",
-                }}
+                className="contact-item-avatar"
               />
-              <h3>{contact.name}</h3>
-              <span>{contact.last_time_connection}</span>
-              <br />
-              <hr />
+              <div className="contact-item-info">
+                <h3>{contact.name}</h3>
+                <span className="contact-item-time">{contact.last_time_connection}</span>
+              </div>
             </Link>
           );
         })}

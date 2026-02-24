@@ -7,7 +7,6 @@ export const ContactsContext = createContext(
   //Representa el valor inicial del contexto, es decir, lo que va devolver el contexto por defecto, nos sirve para saber que propiedades va a tener el contexto, aunque luego se van a modificar
   {
     contacts: [],
-    favorite_name: "",
     addNewMessage: (new_message) => {},
   },
 );
@@ -59,7 +58,6 @@ const ContactsContextProvider = ({ children }) => {
 
   const provider_values = {
     contacts: contactsState,
-    favorite_name: "pepe",
     addNewMessage,
   };
 

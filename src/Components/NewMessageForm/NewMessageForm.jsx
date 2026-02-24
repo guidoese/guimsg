@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { ContactsContext } from "../../Context/ContactsContext";
+import "./NewMessageForm.css";
 
 const NewMessageForm = ({ contact_id }) => {
   const { addNewMessage } = useContext(ContactsContext);
+  const textareaRef = useRef(null);
 
-  /* Logica oara capturar campos del formulario */
+  /* Logica para capturar campos del formulario */
   //FORMA MAS SIMPLE
   function handleSubmitNewMessage(event) {
     event.preventDefault();
@@ -15,43 +17,25 @@ const NewMessageForm = ({ contact_id }) => {
     const new_message = event.target.nuevo_mensaje.value;
     console.log(new_message);
     addNewMessage(contact_id, new_message);
+    
+    // Limpiar el input después de enviar
+    textareaRef.current.value = "";
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmitNewMessage} id="123">
-        <label htmlFor="nuevo_mensaje">Nuevo mensaje</label>
-        <textarea
-          placeholder="Escribe un mensaje..."
-          id="nuevo_mensaje"
-          name="nuevo_mensaje"
-        />
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmitNewMessage} className="new-message-form">
+      <textarea
+        ref={textareaRef}
+        placeholder="Escribe un mensaje..."
+        id="nuevo_mensaje"
+        name="nuevo_mensaje"
+        className="message-input"
+      />
+      <button type="submit" className="send-button">
+        Enviar
+      </button>
+    </form>
   );
 };
 
 export default NewMessageForm;
-
-/* function EjemploDeTargetConBotones() {
-    
-  function handleClickDummy(event) {
-    console.log(event.target);
-  }
-
-  return (
-    <div>
-      <button id="circulo" onClick={handleClickDummy}>
-        Click
-      </button>
-      <button id="linea" onClick={handleClickDummy}>
-        Click
-      </button>
-      <button id="cuadrado" onClick={handleClickDummy}>
-        Click
-      </button>
-    </div>
-  );
-}
- */

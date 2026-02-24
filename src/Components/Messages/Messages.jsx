@@ -1,19 +1,17 @@
 import React from "react";
+import "./Messages.css";
 
 const Messages = ({ contact_selected }) => {
   return (
-    <div>
+    <div className="messages-list">
       {contact_selected.messages.map((message) => {
         return (
-          <div key={message.id}>
-            {message.send_by_me ? (
-              <h3>Enviado mi</h3>
-            ) : (
-              <h3>Enviado por: {contact_selected.name}</h3>
-            )}
-            <p>{message.text}</p>
-            <span>{message.time}</span>
-            <hr />
+          <div
+            key={message.id}
+            className={`message-bubble ${message.send_by_me ? "sent" : "received"}`}
+          >
+            <p className="message-text">{message.text}</p>
+            <span className="message-time">{message.time || "hoy"}</span>
           </div>
         );
       })}

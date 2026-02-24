@@ -1,15 +1,36 @@
 const contacts = [
   {
     id: 1,
-    name: "Yoda",
+    name: "Emiliano Martinez",
     last_time_connection: "Hace 2 horas",
-    profile_picture:
-      "https://images.immediate.co.uk/production/volatile/sites/3/2017/12/yoda-the-empire-strikes-back-28a7558.jpg?quality=90&webp=true&resize=800,534",
+    profile_picture: "/images/EmilianoMartinez.jpg",
     messages: [
       {
         id: 1,
         text: "Hola, como estas?",
-        send_by_me: true, // true si el mensaje fue enviado por mi, false si el mensaje fue enviado por el contacto
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Mira que te como hermano!",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Christian Romero",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/ChristianRomero.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
         created_at: "2024-06-01T12:00:00Z",
         is_read: true,
       },
@@ -23,16 +44,191 @@ const contacts = [
     ],
   },
   {
-    id: 2,
-    name: "Pepe",
+    id: 3,
+    name: "Nicolas Tagliafico",
     last_time_connection: "Hace 3 horas",
-    profile_picture:
-      "https://www.clarin.com/img/2022/01/20/GWR2-6fo__1256x620__1.jpg",
+    profile_picture: "/images/NicolasTagliafico.jpg",
     messages: [
       {
         id: 1,
         text: "Holaaa",
-        send_by_me: true, // true si el mensaje fue enviado por mi, false si el mensaje fue enviado por el contacto
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Bien yo estoy",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Nahuel Molina",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/NahuelMolina.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Bien yo estoy",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "Leandro Paredes",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/LeandroParedes.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Bien yo estoy",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Nicolas Otamendi",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/NicolasOtamendi.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Bien yo estoy",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 7,
+    name: "Rodrigo de Paul",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/RodrigoDePaul.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Bien yo estoy",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: "Enzo Fernandez",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/EnzoFernandez.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Bien yo estoy",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "Julian Alvarez",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/JulianAlvarez.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Bien yo estoy",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: "Leonel Messi",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/LeonelMessi.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 2,
+        text: "Bien yo estoy",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+    ],
+  },
+  {
+    id: 11,
+    name: "Alexis MacAllister",
+    last_time_connection: "Hace 3 horas",
+    profile_picture: "/images/AlexisMacAllister.jpg",
+    messages: [
+      {
+        id: 1,
+        text: "Holaaa",
+        send_by_me: true,
         created_at: "2024-06-01T12:00:00Z",
         is_read: true,
       },
