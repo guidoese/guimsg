@@ -17,7 +17,7 @@ const NewMessageForm = ({ contact_id }) => {
     const new_message = event.target.nuevo_mensaje.value;
     console.log(new_message);
     addNewMessage(contact_id, new_message);
-    
+
     // Limpiar el input después de enviar
     textareaRef.current.value = "";
   }

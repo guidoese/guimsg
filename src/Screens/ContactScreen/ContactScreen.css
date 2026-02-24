@@ -4,6 +4,10 @@
   background-color: #f0f0f0;
 }
 
+.sidebar-wrapper {
+  display: flex;
+}
+
 .chat-area {
   flex: 1;
   display: flex;
@@ -28,11 +32,36 @@
   gap: 15px;
 }
 
+.back-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  color: #25d366;
+  flex-shrink: 0;
+}
+
+.back-button:hover {
+  background-color: #e5e5e5;
+}
+
+.back-button:active {
+  background-color: #d0d0d0;
+}
+
 .contact-avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
 }
 
 .contact-info h2 {
@@ -44,6 +73,7 @@
 .last-connection {
   font-size: 12px;
   color: #999;
+  display: block;
 }
 
 .messages-container {
@@ -61,3 +91,74 @@
   background-color: white;
 }
 
+/* Responsive Design */
+@media (max-width: 770px) {
+  .contact-screen-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .sidebar-wrapper {
+    display: none;
+  }
+
+  .chat-area {
+    width: 100%;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .messages-container {
+    padding: 15px;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .chat-header {
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .contact-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-info h2 {
+    font-size: 15px;
+  }
+
+  .last-connection {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .messages-container {
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+
+  .chat-header {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .contact-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-info h2 {
+    font-size: 14px;
+  }
+}

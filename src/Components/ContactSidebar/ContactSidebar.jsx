@@ -17,7 +17,11 @@ export default function ContactSidebar() {
       <div className="contacts-list">
         {contacts.map((contact) => {
           return (
-            <Link to={`/contact/${contact.id}`} key={contact.id} className="contact-item">
+            <Link
+              to={`/contact/${contact.id}`}
+              key={contact.id}
+              className="contact-item"
+            >
               <img
                 src={contact.profile_picture}
                 alt={contact.name}
@@ -25,7 +29,9 @@ export default function ContactSidebar() {
               />
               <div className="contact-item-info">
                 <h3>{contact.name}</h3>
-                <span className="contact-item-time">{contact.last_time_connection}</span>
+                <span className="contact-item-time">
+                  {contact.last_time_connection}
+                </span>
               </div>
             </Link>
           );
