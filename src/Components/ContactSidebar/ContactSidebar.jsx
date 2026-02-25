@@ -12,7 +12,7 @@ export default function ContactSidebar() {
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
-        <h2>Chats</h2>
+        <h2>WhattsApp</h2>
       </div>
       <div className="contacts-list">
         {contacts.map((contact) => {

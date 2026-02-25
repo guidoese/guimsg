@@ -11,7 +11,7 @@ const Messages = ({ contact_selected }) => {
             className={`message-bubble ${message.send_by_me ? "sent" : "received"}`}
           >
             <p className="message-text">{message.text}</p>
-            <span className="message-time">{message.time || "hoy"}</span>
+            <span className="message-time">{message.created_at}</span>
           </div>
         );
       })}

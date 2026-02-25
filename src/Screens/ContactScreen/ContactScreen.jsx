@@ -37,11 +37,7 @@ export default function ContactScreen() {
         ) : (
           <>
             <div className="chat-header">
-              <button
-                className="back-button"
-                onClick={handleBackToSidebar}
-                aria-label="Volver a contactos"
-              >
+              <button className="back-button" onClick={handleBackToSidebar}>
                 <GoArrowLeft size={24} />
               </button>
               <img

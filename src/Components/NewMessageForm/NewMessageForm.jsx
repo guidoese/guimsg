@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { ContactsContext } from "../../Context/ContactsContext";
 import "./NewMessageForm.css";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 const NewMessageForm = ({ contact_id }) => {
   const { addNewMessage } = useContext(ContactsContext);
@@ -32,7 +33,7 @@ const NewMessageForm = ({ contact_id }) => {
         className="message-input"
       />
       <button type="submit" className="send-button">
-        Enviar
+        <CiLocationArrow1 size={24} />
       </button>
     </form>
   );

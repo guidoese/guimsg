@@ -2,12 +2,12 @@ const contacts = [
   {
     id: 1,
     name: "Emiliano Martinez",
-    last_time_connection: "Hace 2 horas",
+    last_time_connection: "Justo ahora",
     profile_picture: "/images/EmilianoMartinez.jpg",
     messages: [
       {
         id: 1,
-        text: "Hola, como estas?",
+        text: "Que haces Dibu??",
         send_by_me: true,
         created_at: "2024-06-01T12:00:00Z",
         is_read: true,
@@ -24,19 +24,26 @@ const contacts = [
   {
     id: 2,
     name: "Christian Romero",
-    last_time_connection: "Hace 3 horas",
+    last_time_connection: "Hace 20 minutos",
     profile_picture: "/images/ChristianRomero.jpg",
     messages: [
       {
         id: 1,
-        text: "Holaaa",
+        text: "Que haces Cuti",
         send_by_me: true,
         created_at: "2024-06-01T12:00:00Z",
         is_read: true,
       },
       {
         id: 2,
-        text: "Bien yo estoy",
+        text: "Se te fue la mano con la entradita de atras el domingo",
+        send_by_me: true,
+        created_at: "2024-06-01T12:00:00Z",
+        is_read: true,
+      },
+      {
+        id: 3,
+        text: "Que queres si nos estan pegando un baile Barbaro",
         send_by_me: false,
         created_at: "2024-06-01T12:05:00Z",
         is_read: false,
@@ -46,19 +53,26 @@ const contacts = [
   {
     id: 3,
     name: "Nicolas Tagliafico",
-    last_time_connection: "Hace 3 horas",
+    last_time_connection: "Hace 1 hora",
     profile_picture: "/images/NicolasTagliafico.jpg",
     messages: [
       {
         id: 1,
-        text: "Holaaa",
+        text: "Holaaa Taglia",
         send_by_me: true,
         created_at: "2024-06-01T12:00:00Z",
         is_read: true,
       },
       {
         id: 2,
-        text: "Bien yo estoy",
+        text: "Que haces campeon arranco el stream palpitando la finalisima a las 23",
+        send_by_me: false,
+        created_at: "2024-06-01T12:05:00Z",
+        is_read: false,
+      },
+      {
+        id: 3,
+        text: "Te copas y salis 10 minutitos reaccionando a Argentina-Italia en Wembley",
         send_by_me: false,
         created_at: "2024-06-01T12:05:00Z",
         is_read: false,
