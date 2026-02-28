@@ -30,16 +30,17 @@ export const LoginForm = () => {
         <img src="./whatsapp.png" alt="logo" class="logo-whattsapp" />
         <h2 className="wellcome-title">Bienvenido a guiMsg</h2>
         <h3 className="authors-subtitle">Inspirado en Whattsapp</h3>
-        <textarea
+        <input
           ref={textareaRef}
+          type="text"
           id="username"
           name="username"
           className="login-input"
           placeholder="Usuario"
         />
 
-        <textarea
-          ref={textareaRef}
+        <input
+          type="password"
           id="userpassword"
           name="userpassword"
           className="login-input"
