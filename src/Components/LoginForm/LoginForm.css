@@ -1,0 +1,96 @@
+.login-form-container {
+  display: flex;
+  width: 500px;
+  height: auto;
+  background-color: #f7f5f3;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f5f3;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.logo-whattsapp {
+  display: flex;
+  margin: 0px;
+  position: relative;
+  max-height: 150px;
+  width: auto;
+  background-color: transparent;
+}
+
+.wellcome-title {
+  margin: 0px;
+  color: #333;
+}
+
+.authors-subtitle {
+  margin: 0px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.submit-login-button {
+  background-color: #25d366;
+  color: white;
+  cursor: pointer;
+}
+
+.submit-login-button:hover {
+  background-color: #1ebc5b;
+}
+
+.login-input,
+.submit-login-button {
+  padding: 10px;
+  font-size: 1rem;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Center input text and placeholder for username/password fields */
+/* centers typed text and placeholder */
+
+.login-input::placeholder {
+  display: flex;
+  justify-content: center;
+  color: #999;
+}
+
+/* vendor prefixes for broader compatibility */
+.login-input:focus,
+.submit-login-button:focus {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* media queries */
+
+@media (max-width: 600px) {
+  .login-form-container {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    min-height: 250px;
+    padding: 20px;
+  }
+
+  .login-input,
+  .submit-login-button {
+    width: 100%;
+  }
+}

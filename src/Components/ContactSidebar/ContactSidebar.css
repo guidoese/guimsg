@@ -8,6 +8,9 @@
 }
 
 .sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
   border-bottom: 1px solid #e5e5e5;
   background-color: #f8f8f8;
@@ -47,6 +50,10 @@ co logrer .contact-item:hover {
   flex-shrink: 0;
 }
 
+.user-avatar {
+  display: flex;
+  margin-right: 10px;
+}
 .contact-item-info {
   flex: 1;
   min-width: 0;
@@ -69,4 +76,12 @@ co logrer .contact-item:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Responsive: make sidebar full-width below 770px */
+@media (max-width: 770px) {
+  .sidebar-container {
+    width: 100vw;
+    height: auto; /* allow chat area to control height */
+  }
 }

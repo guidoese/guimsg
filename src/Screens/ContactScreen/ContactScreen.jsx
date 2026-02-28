@@ -19,7 +19,7 @@ export default function ContactScreen() {
   );
 
   const handleBackToSidebar = () => {
-    navigate("/");
+    navigate("/home");
   };
 
   return (

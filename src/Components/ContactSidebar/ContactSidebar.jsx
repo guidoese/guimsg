@@ -3,6 +3,7 @@ import { getContacts } from "../../services/contactsService";
 import { ContactsContext } from "../../Context/ContactsContext";
 import { Link } from "react-router";
 import "./ContactSidebar.css";
+import user from "../../data/userData";
 
 export default function ContactSidebar() {
   //useContext es un hook que nos permite consumir el contexto
@@ -12,7 +13,12 @@ export default function ContactSidebar() {
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
-        <h2>WhattsApp</h2>
+        <h2>WhattsApp de {user.name}</h2>
+        <img
+          src={user.profile_picture}
+          alt="user-avatar"
+          className="user-avatar"
+        />
       </div>
       <div className="contacts-list">
         {contacts.map((contact) => {
