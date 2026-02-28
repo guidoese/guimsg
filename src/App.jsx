@@ -6,6 +6,7 @@ import ErrorNotFoundScreen from "./Screens/ErrorNotFoundScreen/ErrorNotFoundScre
 import { getContacts } from "./services/contactsService";
 import ContactsContextProvider from "./Context/ContactsContext";
 import { LoginScreen } from "./Screens/LoginScreen/LoginScreen";
+import { ContactScreenInfo } from "./Screens/ContactScreenInfo/ContactScreenInfo";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
           <Route path="/" element={<LoginScreen />} />
           <Route path="/home" element={<HomeScreen />} />
           <Route path="/contact/:contact_id" element={<ContactScreen />} />
+          <Route
+            path="/contact/:contact_id/info"
+            element={<ContactScreenInfo />}
+          />
           <Route path="*" element={<ErrorNotFoundScreen />} />
         </Routes>
       </ContactsContextProvider>

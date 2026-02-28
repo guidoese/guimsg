@@ -1,0 +1,65 @@
+.contact-info-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(190, 200, 190);
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* no positioning; arrow should position relative to box */
+}
+.contact-info-box {
+  display: flex;
+  width: auto;
+  height: auto;
+  background-color: #f7f5f3;
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative; /* reference for the arrow */
+}
+.contact-avatar-info {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.arrow-back-button-info {
+  display: flex;
+  position: absolute; /* relativo al .contact-info-box */
+  border-radius: 50px;
+  top: 20px; /* 10px desde el borde superior del cuadro */
+  left: 20px; /* 10px desde el borde izquierdo del cuadro */
+  z-index: 5;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.arrow-button {
+  display: flex;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow-button:hover {
+  background-color: #e5e5e5;
+}
+
+.arrow-button:active {
+  background-color: #d0d0d0;
+}
+
+@media (max-width: 770px) {
+}

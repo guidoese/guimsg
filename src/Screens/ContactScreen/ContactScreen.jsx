@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import ContactSidebar from "../../Components/ContactSidebar/ContactSidebar";
-import { useParams, useNavigate } from "react-router";
+import { useParams, useNavigate, Link } from "react-router";
 import { ContactsContext } from "../../Context/ContactsContext";
 import NewMessageForm from "../../Components/NewMessageForm/NewMessageForm";
 import Messages from "../../Components/Messages/Messages";
@@ -40,17 +40,23 @@ export default function ContactScreen() {
               <button className="back-button" onClick={handleBackToSidebar}>
                 <GoArrowLeft size={24} />
               </button>
-              <img
-                src={contact_selected.profile_picture}
-                alt={contact_selected.name}
-                className="contact-avatar"
-              />
-              <div className="contact-info">
-                <h2>{contact_selected.name}</h2>
-                <span className="last-connection">
-                  {contact_selected.last_time_connection}
-                </span>
-              </div>
+              <Link
+                to={`/contact/${contact_selected.id}/info`}
+                key={contact_selected.id}
+                className="contact-item-header"
+              >
+                <img
+                  src={contact_selected.profile_picture}
+                  alt={contact_selected.name}
+                  className="contact-avatar"
+                />
+                <div className="contact-info">
+                  <h2>{contact_selected.name}</h2>
+                  <span className="last-connection">
+                    {contact_selected.last_time_connection}
+                  </span>
+                </div>
+              </Link>
             </div>
 
             <div className="messages-container">

@@ -9,7 +9,7 @@ export default function ContactSidebar() {
   //useContext es un hook que nos permite consumir el contexto
   //Recibe por parametro el contexto que queremos consumir
   //Una vez consumido me traera el valor del value del contexto
-  const { contacts, favorite_name } = useContext(ContactsContext);
+  const { contacts } = useContext(ContactsContext);
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
