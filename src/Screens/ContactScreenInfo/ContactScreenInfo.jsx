@@ -39,7 +39,6 @@ export const ContactScreenInfo = () => {
         <h1>{contact_selected.name}</h1>
         <p>Teléfono: {contact_selected.id}</p>
         <p>Última conexión: {contact_selected.last_time_connection}</p>
-        {/* ...any other details*/}
       </div>
     </div>
   );

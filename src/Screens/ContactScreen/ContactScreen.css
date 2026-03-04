@@ -13,14 +13,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* wallpaper background visible under messages and input area */
+
   background-image: url("/images/backchat.jpg");
   background-repeat: repeat;
   background-position: center;
   background-size: auto;
-  background-color: var(
-    --color-background
-  ); /* fallback for when image is missing */
+  background-color: var(--color-background);
 }
 
 .empty-state {
@@ -111,7 +109,7 @@
 @media (max-width: 770px) {
   .contact-screen-container {
     min-height: 100vh;
-    width: 100vw; /* use viewport width instead of height */
+    width: 100vw;
   }
 
   .sidebar-wrapper {
@@ -119,10 +117,9 @@
   }
 
   .chat-area {
-    flex: 1; /* let flex handle width */
+    flex: 1;
     height: 100vh;
   }
-
   .back-button {
     display: flex;
     align-items: center;

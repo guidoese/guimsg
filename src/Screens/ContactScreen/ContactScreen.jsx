@@ -25,7 +25,7 @@ export default function ContactScreen() {
 
   return (
     <div className="contact-screen-container">
-      <div className="sidebar-wrapper">
+      <div className={`sidebar-wrapper ${showSidebar ? "visible" : ""}`}>
         <ContactSidebar />
       </div>
 

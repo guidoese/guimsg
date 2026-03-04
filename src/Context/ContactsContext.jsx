@@ -36,23 +36,6 @@ const ContactsContextProvider = ({ children }) => {
         }
         return contact;
       });
-
-      //Variante 2
-
-      /* 
-      const cloned_state=[...currentContactState];
-      for(const contact of cloned_state){
-        if(Number(contact.id)===Number(contact_id)){
-          contact.messages.push({
-            id: contact.messages.length + 1,
-            text: new_message,
-            send_by_me: true,
-            created_at: new Date().toISOString(),
-            is_read: false,
-          });
-        }
-    }
-    return cloned_state; */
     });
   }
 

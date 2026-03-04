@@ -2,7 +2,7 @@
   display: flex;
   width: 500px;
   height: auto;
-  background-color: #f7f5f3;
+  background-color: var(--color-login-form);
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f7f5f3;
+  background-color: var(--color-login-form);
   gap: 10px;
   box-sizing: border-box;
 }
@@ -33,23 +33,27 @@
 
 .wellcome-title {
   margin: 0px;
-  color: #333;
+  color: var(--color-msg);
 }
 
 .authors-subtitle {
   margin: 0px;
-  color: #666;
+  color: var(--color-msg-info);
   font-size: 1rem;
 }
 
 .submit-login-button {
-  background-color: #25d366;
-  color: white;
+  background-color: var(--color-submit-button);
+  color: var(--color-background);
   cursor: pointer;
 }
 
 .submit-login-button:hover {
-  background-color: #1ebc5b;
+  background-color: var(--color-submit-button-hover);
+}
+
+.submit-login-button:active {
+  background-color: var(--color-submit-button-active);
 }
 
 .login-input,
@@ -62,23 +66,19 @@
   border: none;
 }
 
-/* Center input text and placeholder for username/password fields */
-/* centers typed text and placeholder */
-
 .login-input::placeholder {
   display: flex;
   justify-content: center;
-  color: #999;
+  color: var(--color-place-holder);
 }
 
-/* vendor prefixes for broader compatibility */
 .login-input:focus,
 .submit-login-button:focus {
   outline: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* media queries */
+/* responsive */
 
 @media (max-width: 600px) {
   .login-form-container {

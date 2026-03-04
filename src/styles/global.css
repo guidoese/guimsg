@@ -21,11 +21,16 @@ body {
 :root {
   /* COLORES */
   --color-background: white;
+  --color-login-form: #f7f5f3;
   --color-border-header: #e5e5e5;
   --color-contact-hover: #f0f0f0;
   --color-bcgnd-title: #f8f8f8;
   --color-bcgnd-start: rgb(190, 200, 190);
+  --color-place-holder: #bbb;
   --color-sidebar-header-title: #1daa61;
+  --color-submit-button: #25d366;
+  --color-submit-button-hover: #1ebc5b;
+  --color-submit-button-active: #1a9e4b;
   --color-back-button-active: #d0d0d0;
   --color-msg: rgb(10, 10, 10);
   --color-msg-info: rgb(0, 0, 0, 0.6);
@@ -64,7 +69,7 @@ button {
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Mobile optimizations */
+/* Responsive */
 @media (max-width: 770px) {
   html,
   body,
