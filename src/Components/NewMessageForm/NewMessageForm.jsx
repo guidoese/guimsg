@@ -11,16 +11,24 @@ const NewMessageForm = ({ contact_id }) => {
   //FORMA MAS SIMPLE
   function handleSubmitNewMessage(event) {
     event.preventDefault();
-    /* 
-    event.target es una referencia al elemento del HTML que desencadeno el evento
-    */
+    // read value directly from ref instead of relying on event.target
+    const new_message = textareaRef.current?.value || "";
+    if (new_message.trim() === "") return;
 
-    const new_message = event.target.nuevo_mensaje.value;
     console.log(new_message);
     addNewMessage(contact_id, new_message);
 
     // Limpiar el input después de enviar
     textareaRef.current.value = "";
+  }
+
+  // funcion para lograr que el Enter Me haga el submit del mensaje
+  function handleKeyDown(event) {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      // aca disparo la funcion handler
+      handleSubmitNewMessage(event);
+    }
   }
 
   return (
@@ -31,6 +39,7 @@ const NewMessageForm = ({ contact_id }) => {
         id="nuevo_mensaje"
         name="nuevo_mensaje"
         className="message-input"
+        onKeyDown={handleKeyDown}
       />
       <button type="submit" className="send-button">
         <CiLocationArrow1 size={24} />

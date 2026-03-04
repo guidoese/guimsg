@@ -1,7 +1,7 @@
 .sidebar-container {
   width: 500px;
-  background-color: white;
-  border-right: 1px solid #e5e5e5;
+  background-color: var(--color-background);
+  border-right: 1px solid var(--color-border-header);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -11,15 +11,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: var(--font-std);
   padding: 20px;
-  border-bottom: 1px solid #e5e5e5;
-  background-color: #f8f8f8;
+  border-bottom: 1px solid var(--color-border-header);
+  background-color: var(--color-bcgnd-title);
 }
 
-.sidebar-header h2 {
+.sidebar-header-title {
   margin: 0;
-  font-size: 24px;
-  color: #51ab61;
+  font-size: var(--font-size-header);
+  font-family: var(--font-std);
+  color: var(--color-sidebar-header-title);
   font-weight: 600;
 }
 
@@ -32,14 +34,14 @@
   display: flex;
   align-items: center;
   padding: 15px 15px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-contact-hover);
   text-decoration: none;
   color: inherit;
   transition: background-color 0.2s;
   gap: 12px;
 }
-co logrer .contact-item:hover {
-  background-color: #f0f0f0;
+.contact-item:hover {
+  background-color: var(--color-contact-hover);
 }
 
 .contact-item-avatar {
@@ -59,19 +61,20 @@ co logrer .contact-item:hover {
   min-width: 0;
 }
 
-.contact-item-info h3 {
+.contact-name {
   margin: 0;
-  font-size: 14px;
-  color: #333;
-  font-weight: 600;
+  font-size: var(--font-size-std);
+  font-family: var(--font-std);
+  color: var(--color-msg);
+  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .contact-item-time {
-  font-size: 12px;
-  color: #999;
+  font-size: var(--font-size-time-info);
+  color: var(--color-msg-info);
   display: block;
   white-space: nowrap;
   overflow: hidden;

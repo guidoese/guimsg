@@ -6,6 +6,7 @@ import NewMessageForm from "../../Components/NewMessageForm/NewMessageForm";
 import Messages from "../../Components/Messages/Messages";
 import { GoArrowLeft } from "react-icons/go";
 import "./ContactScreen.css";
+import "../../styles/global.css";
 
 export default function ContactScreen() {
   const { contacts } = useContext(ContactsContext);
@@ -51,7 +52,9 @@ export default function ContactScreen() {
                   className="contact-avatar"
                 />
                 <div className="contact-info">
-                  <h2>{contact_selected.name}</h2>
+                  <h2 className="contact-info-title">
+                    {contact_selected.name}
+                  </h2>
                   <span className="last-connection">
                     {contact_selected.last_time_connection}
                   </span>

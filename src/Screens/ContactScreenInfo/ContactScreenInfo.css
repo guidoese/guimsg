@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(190, 200, 190);
+  background-color: var(--color-bcgnd-start);
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
@@ -12,8 +12,8 @@
 }
 .contact-info-box {
   display: flex;
-  width: auto;
-  height: auto;
+  width: 450px;
+  height: 450px;
   background-color: #f7f5f3;
   padding: 20px 40px;
   border-radius: 20px;
@@ -54,12 +54,17 @@
 }
 
 .arrow-button:hover {
-  background-color: #e5e5e5;
+  background-color: var(--color-border-header);
 }
 
 .arrow-button:active {
-  background-color: #d0d0d0;
+  background-color: var(--color-back-button-active);
 }
 
-@media (max-width: 770px) {
+@media (max-width: 480px) {
+  .contact-info-box {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
 }
