@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import ContactSidebar from "../../Components/ContactSidebar/ContactSidebar";
 import { useParams, useNavigate, Link } from "react-router";
 import { ContactsContext } from "../../Context/ContactsContext";
@@ -7,17 +7,27 @@ import Messages from "../../Components/Messages/Messages";
 import { GoArrowLeft } from "react-icons/go";
 import "./ContactScreen.css";
 import "../../styles/global.css";
+import UserSidebar from "../../Components/UserSidebar/UserSidebar";
 
 export default function ContactScreen() {
   const { contacts } = useContext(ContactsContext);
   const { contact_id } = useParams();
   const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState(false);
+  const messagesContainerRef = useRef(null);
 
   //Busco el contacto seleccionado en la lista de contactos
   const contact_selected = contacts.find(
     (contact) => Number(contact.id) === Number(contact_id),
   );
+
+  // scroll to bottom anytime the selected contact's messages list changes
+  useEffect(() => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
+    }
+  }, [contact_selected?.id, contact_selected?.messages?.length]);
 
   const handleBackToSidebar = () => {
     navigate("/home");
@@ -25,6 +35,9 @@ export default function ContactScreen() {
 
   return (
     <div className="contact-screen-container">
+      <div className="user-wrapper">
+        <UserSidebar />
+      </div>
       <div className={`sidebar-wrapper ${showSidebar ? "visible" : ""}`}>
         <ContactSidebar />
       </div>
@@ -62,7 +75,7 @@ export default function ContactScreen() {
               </Link>
             </div>
 
-            <div className="messages-container">
+            <div className="messages-container" ref={messagesContainerRef}>
               <Messages contact_selected={contact_selected} />
             </div>
 

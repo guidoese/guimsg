@@ -1,0 +1,20 @@
+.user-sidebar-container {
+  width: 50px;
+  background-color: var(--color-bcgnd-title);
+  border-right: 1px solid var(--color-border-header);
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.user-photo {
+  display: flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  justify-content: end;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}

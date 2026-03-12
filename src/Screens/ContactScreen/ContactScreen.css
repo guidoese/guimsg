@@ -8,7 +8,9 @@
 .sidebar-wrapper {
   display: flex;
 }
-
+.user-wrapper {
+  display: flex;
+}
 .chat-area {
   flex: 1;
   display: flex;
@@ -111,6 +113,9 @@
     min-height: 100vh;
     width: 100vw;
   }
+  .user-wrapper {
+    display: none;
+  }
 
   .sidebar-wrapper {
     display: none;
@@ -118,7 +123,7 @@
 
   .chat-area {
     flex: 1;
-    height: 100vh;
+    height: 100dvh;
   }
   .back-button {
     display: flex;
